@@ -1,0 +1,36 @@
+<logic boso>
+    <token scm>
+    <token DIMENSIONALITY>
+    <int ?dim>
+    <token TRUE_DIMENSIONALITY>
+    <int ?tdim>
+    <token MAX_PARENTS>
+    <int ?max_parents>
+    <token HIDDEN_NODES>
+    <int ?hidden_nodes>
+    <logic loop d 0 tdim>
+        <token start_component>
+        <token index>
+        <int d>
+        <token function>
+        <token ?function[d]>
+	<token parent_count>
+	<int ?parent_count[d]>
+        <token parents>
+        <logic loop c 0 max_parents>
+	    <int ?parents[d][c]>
+	    <float ?factor[d][c]>
+        <logic end_loop>
+	<token noise>
+	<float ?noises[d]>
+        <token observed>
+	<bool ?observed[d]>
+	<token shift>
+	<float ?bias_before[d]>
+	<float ?bias_after[d]>
+	<token scale>
+	<float ?scales[d]>
+        <token end_component>
+    <logic end_loop>
+    <token end_scm>
+<logic end_boso>

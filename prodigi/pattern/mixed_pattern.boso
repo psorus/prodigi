@@ -1,0 +1,91 @@
+<logic boso>
+<logic select family>
+
+<logic option family gmm>
+    <token gmm>
+    <token DIMENSIONALITY>
+    <int ?dim>
+    <token NUM_COMPONENTS>
+    <int ?ncomp>
+    <logic loop c 0 ncomp>
+        <token start_component>
+        <int c>
+        <token weight>
+        <float ?weight[c]>
+        <logic loop d 0 dim>
+            <token index>
+            <int d>
+            <token mean>
+            <float ?mean[c][d]>
+            <token diag_std>
+            <float ?diag_std[c][d]>
+        <logic end_loop>
+        <token end_component>
+    <logic end_loop>
+    <token end_gmm>
+<logic end_option>
+
+<logic option family copula>
+    <token copula>
+    <token DIMENSIONALITY>
+    <int ?dim>
+    <logic loop d 0 dim>
+	<token start_component>
+        <token index>
+	<int d>
+	<token marginal>
+	<token ?function[d]>
+	<token params>
+	<logic loop i 0 4>
+	    <float ?params[d][i]>
+	<logic end_loop>
+	<token end_component>
+    <logic end_loop>
+    <token correlations>
+    <logic loop c1 0 dim>
+	<logic loop c2 0 dim oc1>
+	    <float ?corr[c1][c2]>
+	<logic end_loop>
+    <logic end_loop>
+    <token end_correlations>
+    <token end_copula>
+<logic end_option>
+
+<logic option family scm>
+    <token scm>
+    <token DIMENSIONALITY>
+    <int ?dim>
+    <token TRUE_DIMENSIONALITY>
+    <int ?tdim>
+    <token MAX_PARENTS>
+    <int ?max_parents>
+    <token HIDDEN_NODES>
+    <int ?hidden_nodes>
+    <logic loop d 0 tdim>
+        <token start_component>
+        <token index>
+        <int d>
+        <token function>
+        <token ?function[d]>
+        <token parents>
+        <logic loop c 0 max_parents>
+            <int ?parents[d][c]>
+            <float ?factor[d][c]>
+        <logic end_loop>
+        <token noise>
+        <float ?noises[d]>
+        <token observed>
+        <bool ?observed[d]>
+	<token shift>
+	<float ?bias_before[d]>
+	<float ?bias_after[d]>
+	<token scale>
+	<float ?scales[d]>
+        <token end_component>
+    <logic end_loop>
+    <token end_scm>
+<logic end_option>
+
+
+<logic end_select>
+<logic end_boso>

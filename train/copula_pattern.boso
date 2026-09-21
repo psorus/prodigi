@@ -1,0 +1,25 @@
+<logic boso>
+    <token copula>
+    <token DIMENSIONALITY>
+    <int ?dim>
+    <logic loop d 0 dim>
+	<token start_component>
+        <token index>
+	<int d>
+	<token function>
+	<token ?function[d]>
+	<token params>
+	<logic loop i 0 4>
+	    <float ?params[d][i]>
+	<logic end_loop>
+	<token end_component>
+    <logic end_loop>
+    <token correlations>
+    <logic loop c1 0 dim>
+	<logic loop c2 0 dim oc1>
+	    <float ?corr[c1][c2]>
+	<logic end_loop>
+    <logic end_loop>
+    <token end_correlations>
+    <token end_copula>
+<logic end_boso>

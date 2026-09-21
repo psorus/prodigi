@@ -1,0 +1,24 @@
+<logic boso>
+    <token gmm>
+    <token DIMENSIONALITY>
+    <int ?dim>
+    <token NUM_COMPONENTS>
+    <int ?ncomp>
+    <logic loop c 0 ncomp>
+	<token start_component>
+	<int c>
+	<token weight>
+	<float ?weight[c]>
+	<logic loop d 0 dim>
+	    <token index>
+	    <int d>
+	    <token mean>
+	    <float ?mean[c][d]>
+	    <token diag_std>
+	    <float ?diag_std[c][d]>
+	<logic end_loop>
+	<token end_component>
+    <logic end_loop>
+    <token end_gmm>
+
+<logic end_boso>
