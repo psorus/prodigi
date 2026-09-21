@@ -64,7 +64,7 @@ def random_func(layer):
 
 class SCMPrior(Prior):
     def __init__(self,cfg=None):
-        super().__init__(cfg,"scm_pattern.boso")
+        super().__init__(cfg,"train/scm_pattern.boso")
         self.depth_mode=self.cfg.DEPTH_MODE.lower()
         self.depth_min=self.cfg.DEPTH_MIN
         self.depth_max=self.cfg.DEPTH_MAX

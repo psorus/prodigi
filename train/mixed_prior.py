@@ -7,7 +7,7 @@ from scm_prior import SCMPrior
 
 
 class MixedPrior(Prior):
-    def __init__(self,cfg=None, pattern="mixed_pattern.boso",priors=None):
+    def __init__(self,cfg=None, pattern="train/mixed_pattern.boso",priors=None):
         super().__init__(cfg,pattern)
         if priors is None:
             priors={"gmm":GMMPrior(self.cfg), "copula":CopulaPrior(self.cfg), "scm":SCMPrior(self.cfg)}

@@ -3,7 +3,7 @@ import numpy as np
 import torch
 
 class Prior():
-    def __init__(self, cfg=None, template="gmm_pattern.boso"):
+    def __init__(self, cfg=None, template="train/gmm_pattern.boso"):
         if cfg is None:
             from config import Config
             cfg=Config()

@@ -218,7 +218,7 @@ def from_upper_triangle_torch(triag, dim):
 
 class CopulaPrior(Prior):
     def __init__(self, cfg=None):
-        super().__init__(cfg, "copula_pattern.boso")
+        super().__init__(cfg, "train/copula_pattern.boso")
         self.advanced_corr=self.cfg.ADVANCED_CORR
         self.eta_min=self.cfg.ETA_MIN
         self.eta_max=self.cfg.ETA_MAX

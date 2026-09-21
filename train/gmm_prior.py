@@ -12,7 +12,7 @@ from weight_generator import generate_weights
 
 class GMMPrior(Prior):
     def __init__(self, cfg=None):
-        super().__init__(cfg=cfg, template="gmm_pattern.boso")
+        super().__init__(cfg=cfg, template="train/gmm_pattern.boso")
         self.minimum_weight=self.cfg.MINIMUM_WEIGHT
         self.minimum_delta=self.cfg.MINIMUM_DELTA
     def allowed_args(self, cfg=None)->list:
