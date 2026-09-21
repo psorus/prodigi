@@ -126,9 +126,10 @@ If you find this code useful in your research, please cite:
 ```bibtex
 @inproceedings{prodigi,
   title     = {From Data to Program: Fast & Direct Generative Program Inference from Empirical Data},
-  author    = {...},
+  author    = {Hidden for anonymity},
   booktitle = {International Conference on Learning Representations},
-  year      = {2026}
+  year      = {2026},
+  doi       = {},
 }
 ```
 
