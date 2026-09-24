@@ -28,8 +28,8 @@ The complete list of Python dependencies is provided in [`requirements.txt`](req
 ```text
 .
 ├── checkpoint/
-│   ├── epoch_1000_base.pt
-│   └── epoch_1000.pt
+│   ├── encoder.pt
+│   └── decoder.pt
 ├── images/
 │   ├── zeroshot.png
 │   └── finetune.png
@@ -46,8 +46,8 @@ The `checkpoint/` directory contains the latest pretrained PRODiGI model for dat
 
 For storage efficiency, the checkpoint is split across two files:
 
-* `checkpoint/epoch_1000_base.pt` — program decoder weights
-* `checkpoint/epoch_1000.pt` — dataset encoder weights
+* `checkpoint/decoder.pt` — program decoder weights
+* `checkpoint/encoder.pt` — dataset encoder weights
 
 Both files are required for inference.
 

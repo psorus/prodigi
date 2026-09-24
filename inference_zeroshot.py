@@ -5,8 +5,7 @@ import json
 
 #load the pretrained model
 from prodigi import load_model, safe_json
-key="checkpoint/epoch_550"
-draw_batch, encode, decode, read_batch, prior=load_model("final50",f"{key}.pt",f"{key}_base.pt")
+draw_batch, encode, decode, read_batch, prior=load_model("final50",f"checkpoint/decoder.pt",f"checkpoint/encoder.pt")
 
 
 #generate some toy data, using the prior we just loaded
